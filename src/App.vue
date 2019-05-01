@@ -24,8 +24,10 @@
       </router-link>
     </v-toolbar>
 
-    <v-content class="mx-4 mb-4" >
-      <router-view class="black-trasnparent"></router-view>
+    <v-content class="mx-4 mb-4">
+      <v-expand-transition>
+        <router-view class="black-trasnparent"></router-view>
+      </v-expand-transition>
     </v-content>
   </v-app>
 </template>
