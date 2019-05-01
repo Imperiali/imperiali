@@ -9,17 +9,17 @@
       <v-spacer></v-spacer>
       <router-link to="/about" tag="v-btn">
         <v-btn flat >
-          <span class="mr-2">About</span>
+          <span class="mr-2">Sobre</span>
         </v-btn>
       </router-link>
       <router-link to="/work" tag="v-btn">
         <v-btn flat >
-          <span class="mr-2">Work</span>
+          <span class="mr-2">Trabalhos</span>
         </v-btn>
       </router-link>
       <router-link to="/contact" tag="v-btn">
         <v-btn flat >
-          <span class="mr-2">Contact</span>
+          <span class="mr-2">Contato</span>
         </v-btn>
       </router-link>
     </v-toolbar>
