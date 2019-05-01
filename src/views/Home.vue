@@ -22,6 +22,11 @@
             Depois de muitos anos em busca do que realmente me fazia feliz e satisfeito, me encontrei na área do desenvolvimento.
             Trabalhei por algum tempo no meio da industria após concluir meu Técnico em Mecânica, mas é em computação onde realmente
             quero estar.</p>
+          <v-layout justify-space-around>
+            <a target="_blank" href="https://br.linkedin.com/in/igor-imperiali-823958102"><v-icon color="white">fab fa-linkedin</v-icon></a>
+            <a href="https://github.com/Imperiali/" target="_blank"><v-icon color="white">fab fa-github-square</v-icon></a>
+            <a href="https://web.facebook.com/igor.i.fernandes" target="_blank"><v-icon color="white">fab fa-facebook-square</v-icon></a>
+          </v-layout>
         </v-flex>
 
       </v-layout>
@@ -35,3 +40,9 @@
     components: {}
   }
 </script>
+
+<style scoped lang="scss">
+  a{
+    text-decoration: none;
+  }
+</style>
