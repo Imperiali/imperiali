@@ -1,5 +1,5 @@
 <template>
-  <v-app class="grey darken-2">
+  <v-app class="app">
     <v-toolbar flat color="transparent">
       <v-toolbar-title class="headline text-uppercase">
         <router-link to="/" tag="span">
@@ -24,8 +24,8 @@
       </router-link>
     </v-toolbar>
 
-    <v-content class="mx-4 mb-4">
-      <router-view></router-view>
+    <v-content class="mx-4 mb-4" >
+      <router-view class="black-trasnparent"></router-view>
     </v-content>
   </v-app>
 </template>
@@ -41,3 +41,13 @@
     }
   }
 </script>
+
+<style scoped lang="scss">
+  .app {
+    background-image: url("https://i.pinimg.com/564x/47/6d/fa/476dfa75622329da791339ff34dc92a6.jpg");
+  }
+  .black-trasnparent{
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+</style>
