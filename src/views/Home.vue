@@ -14,7 +14,7 @@
           </v-avatar>
         </v-flex>
 
-        <v-flex xs12 sm6 class="presentation ">
+        <v-flex xs12 sm6 class="presentation white--text">
           <h1 class="headline">Olá!</h1>
           <p class="display-2">Igor <b>Imperiali</b> aqui!</p>
           <p class="subheading">Desenvolvedor Web</p>
