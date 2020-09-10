@@ -4,8 +4,11 @@
 <img align="right" src="https://github-readme-stats.vercel.app/api?username=imperiali&show_icons=true&hide_border=true&count_private=true&theme=gotham">
 </a>
 
+<hr/>
+
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=imperiali&layout=compact&hide_border=true&count_private=true&show_icons=true&theme=gotham)
 
+<hr/>
 <!--
 **imperiali/imperiali** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
