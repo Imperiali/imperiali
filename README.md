@@ -1,7 +1,7 @@
 # Imperiali
 
 <a href="#">
-<img align="right" src="https://github-readme-stats.vercel.app/api?username=imperiali&show_icons=true&hide_border=true">
+<img align="right" src="https://github-readme-stats.vercel.app/api?username=imperiali&show_icons=true&hide_border=true&count_private=true">
 </a>
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=imperiali&layout=compact&hide_border=true&count_private=true&show_icons=true)
