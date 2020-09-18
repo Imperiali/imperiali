@@ -1,6 +1,6 @@
 <h2 align="center">😁 Thats's me </h2>
 
-![Github stats](https://github-readme-stats.vercel.app/api?username=Imperiali&layout=compact&hide_border=true&count_private=true&show_icons=true&theme=gotham)
+![Github stats](https://github-readme-stats.vercel.app/api?username=Imperiali&layout=compact&hide_border=true&count_private=true&show_icons=true&theme=gotham&include_all_commits=true)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Imperiali&layout=compact&hide_border=true&count_private=true&show_icons=true&theme=gotham&hide=html,css)
 
