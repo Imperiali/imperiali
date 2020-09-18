@@ -2,7 +2,7 @@
 
 ![Github stats](https://github-readme-stats.vercel.app/api?username=Imperiali&layout=compact&hide_border=true&count_private=true&show_icons=true&theme=gotham)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Imperiali&layout=compact&hide_border=true&count_private=true&show_icons=true&theme=gotham&hide=html)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Imperiali&layout=compact&hide_border=true&count_private=true&show_icons=true&theme=gotham&hide=html,css)
 
 <h2  align="center">📫 Reach me on</h2>
 <p align="center">
