@@ -1,5 +1,15 @@
 <h2 align="center">😁 Thats's me </h2>
 
+
+- 🔭 I’m currently working on @hurbcom
+- 🌱 I’m currently learning React, Graphql and Flutter!
+- 🤔 I’m looking for help with everything
+- 💬 Ask me about whatever you need help
+- 😄 Pronouns: he/him
+- ⚡ Fun fact: I'm a technical mechanic by formation 🤷‍♂️
+
+<hr>
+
 ![Github stats](https://github-readme-stats.vercel.app/api?username=Imperiali&layout=compact&hide_border=true&count_private=true&show_icons=true&theme=gotham&include_all_commits=true)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Imperiali&layout=compact&hide_border=true&count_private=true&show_icons=true&theme=gotham&hide=html,css)
