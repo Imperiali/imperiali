@@ -1,5 +1,12 @@
-<h2 align="center">😁 Thats's me </h2>
 
+![Hi, I'm Imperiali 👋 I'm a 🚀 Brazilian developer 🚀 I ❤️ Resolve Problems ❤️](https://github.com/imperiali/imperiali/raw/master/gif/github-hello.gif)
+
+<!--
+how to make this gif ?
+
+I made my with https://codesandbox.io/s/github-profile-2ijk7
+Then i recorded my screen to gif on Ubuntu with Peek
+-->
 
 - 🔭 I’m currently working on @hurbcom
 - 🌱 I’m currently learning React, Graphql and Flutter!
