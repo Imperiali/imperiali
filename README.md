@@ -4,7 +4,7 @@
 - 🔭 I’m currently working on @hurbcom
 - 🌱 I’m currently learning React, Graphql and Flutter!
 - 🤔 I’m looking for help with everything
-- 💬 Ask me about whatever you need help
+- 💬 Ask me about [whatever you need help](https://github.com/Imperiali/imperiali/issues/new)
 - 😄 Pronouns: he/him
 - ⚡ Fun fact: I'm a technical mechanic by formation 🤷‍♂️
 
