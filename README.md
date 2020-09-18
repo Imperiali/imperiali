@@ -10,13 +10,20 @@
 
 <hr>
 
-![Github stats](https://github-readme-stats.vercel.app/api?username=Imperiali&layout=compact&hide_border=true&count_private=true&show_icons=true&theme=gotham&include_all_commits=true)
+![Github stats](https://github-readme-stats.vercel.app/api?username=Imperiali&layout=compact&hide_border=true&count_private=true&show_icons=true&include_all_commits=true)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Imperiali&layout=compact&hide_border=true&count_private=true&show_icons=true&theme=gotham&hide=html,css)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Imperiali&layout=compact&hide_border=true&count_private=true&show_icons=true&hide=html,css)
 
 <h2  align="center">📫 Reach me on</h2>
 <p align="center">
   <a target="_blank"href="https://www.linkedin.com/in/igor-imperiali/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<hr>
+
+
+<p  align="center">
+  <img src="https://visitor-badge.glitch.me/badge?page_id=imperiali.imperiali" alt="visitor badge"/>
 </p>
 
 <hr>
