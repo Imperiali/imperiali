@@ -8,6 +8,10 @@
 - 😄 Pronouns: he/him
 - ⚡ Fun fact: I'm a technical mechanic by formation 🤷‍♂️
 
+<p  align="left">
+  <img src="https://visitor-badge.glitch.me/badge?page_id=imperiali.imperiali" alt="visitor badge"/>
+</p>
+
 <hr>
 
 ![Github stats](https://github-readme-stats.vercel.app/api?username=Imperiali&layout=compact&hide_border=true&count_private=true&show_icons=true&include_all_commits=true)
@@ -21,12 +25,6 @@
 
 <hr>
 
-
-<p  align="center">
-  <img src="https://visitor-badge.glitch.me/badge?page_id=imperiali.imperiali" alt="visitor badge"/>
-</p>
-
-<hr>
 
 <h2  align="center">💻 Check Out My Repos ⬇️ </h2>
 
