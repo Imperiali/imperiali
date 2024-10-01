@@ -8,16 +8,12 @@ I made my with https://codesandbox.io/s/github-profile-2ijk7
 Then i recorded my screen to gif on Ubuntu with Peek
 -->
 
-- 🔭 I’m currently working on @hurbcom
-- 🌱 I’m currently learning React, Graphql and Flutter!
+- 🔭 I’m currently working on @globant
+- 🌱 I’m currently learning Go, SvelteKit and Flutter!
 - 🤔 I’m looking for help with everything
 - 💬 Ask me about [whatever you need help](https://github.com/Imperiali/imperiali/issues/new)
 - 😄 Pronouns: he/him
 - ⚡ Fun fact: I'm a technical mechanic by formation 🤷‍♂️
-
-<p  align="left">
-  <img src="https://visitor-badge.glitch.me/badge?page_id=imperiali.imperiali" alt="visitor badge"/>
-</p>
 
 <hr>
 
