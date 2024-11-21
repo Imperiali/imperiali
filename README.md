@@ -8,7 +8,6 @@ I made my with https://codesandbox.io/s/github-profile-2ijk7
 Then i recorded my screen to gif on Ubuntu with Peek
 -->
 
-- 🔭 I’m currently working on @globant
 - 🌱 I’m currently learning Go, SvelteKit and Flutter!
 - 🤔 I’m looking for help with everything
 - 💬 Ask me about [whatever you need help](https://github.com/Imperiali/imperiali/issues/new)
