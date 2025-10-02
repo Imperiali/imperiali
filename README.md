@@ -1,22 +1,87 @@
-# Igor Imperiali - Portfolio Pessoal
+<div align="center">
 
-Portfolio profissional desenvolvido com SvelteKit e TailwindCSS.
+# 👨‍💻 Igor Imperiali
 
-## 🚀 Tecnologias
+### Software Engineer Specialist | Full-Stack Developer
 
-- **SvelteKit** - Framework moderno e leve
-- **TailwindCSS** - Estilização utilitária
-- **Vite** - Build tool rápido
+**[🇧🇷 Português](README.md)** | **[🇺🇸 English](README_EN.md)**
 
-## 📦 Instalação
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://imperiali.github.io/imperiali/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/igor-imperiali)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Imperiali)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:igor.imperiali@gmail.com)
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Imperiali&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true)
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Imperiali&theme=tokyonight&hide_border=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Imperiali&layout=compact&theme=tokyonight&hide_border=true)
+
+</div>
+
+---
+
+## 🚀 Sobre o Projeto
+
+Portfólio pessoal moderno e responsivo desenvolvido com as mais recentes tecnologias web. Apresenta experiência profissional, habilidades técnicas, projetos e recomendações de forma elegante e interativa.
+
+### ✨ Features
+
+- 🌐 **Multilíngue** - Suporte completo para Português e Inglês
+- 🌙 **Dark Mode** - Tema escuro/claro com persistência
+- 📱 **Responsivo** - Design adaptativo para todos os dispositivos
+- ⚡ **Performance** - Site estático ultra-rápido
+- 🎨 **Animações** - Transições suaves e modernas
+- 📧 **Formulário de Contato** - Integração com EmailJS
+- 🎠 **Carrossel de Recomendações** - Com autoplay e navegação
+- 🔍 **SEO Otimizado** - Meta tags e estrutura semântica
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+![Svelte](https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+### Tools & Services
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=github&logoColor=white)
+![EmailJS](https://img.shields.io/badge/EmailJS-0072C6?style=for-the-badge&logo=minutemailer&logoColor=white)
+![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+
+## 🚀 Quick Start
+
+### Pré-requisitos
+
+- Node.js 18+ instalado
+- Conta no EmailJS (opcional, para formulário de contato)
+
+### Instalação
 
 ```bash
+git clone https://github.com/Imperiali/imperiali.git
+cd imperiali
 npm install
 ```
 
-## 🛠️ Desenvolvimento
+### Configuração de Ambiente
 
-Para rodar em modo de desenvolvimento:
+1. Copie o arquivo de exemplo:
+```bash
+cp .env.example .env
+```
+
+2. Configure suas credenciais EmailJS no `.env`:
+```env
+PUBLIC_EMAILJS_SERVICE_ID=seu_service_id
+PUBLIC_EMAILJS_TEMPLATE_ID=seu_template_id
+PUBLIC_EMAILJS_AUTOREPLY_ID=seu_autoreply_id
+PUBLIC_EMAILJS_PUBLIC_KEY=sua_public_key
+```
+
+### Desenvolvimento
 
 ```bash
 npm run dev
@@ -24,22 +89,11 @@ npm run dev
 
 Acesse em `http://localhost:5173`
 
-## 🏗️ Build
-
-Para gerar a versão de produção:
+### Build
 
 ```bash
 npm run build
-```
-
-Para visualizar o build:
-
-```bash
 npm run preview
-```
-
-## 📁 Estrutura
-
 ```
 igor-portfolio/
 ├── src/
@@ -125,34 +179,96 @@ O formulário usa EmailJS para enviar emails. Para configurar:
 
 **Nota**: O projeto funciona sem configuração, mas os emails não serão enviados até que você configure o EmailJS.
 
-## 🌐 Deploy
+## 🌐 Deploy no GitHub Pages
 
-O projeto está configurado para export estático e pode ser hospedado em:
+O projeto está configurado com GitHub Actions para deploy automático.
 
-- **Vercel** (recomendado)
-- **Netlify**
-- **GitHub Pages**
-- **Cloudflare Pages**
+### Configuração Inicial
 
-### Deploy na Vercel
+1. **Fork/Clone** este repositório
 
-```bash
-npm install -g vercel
-vercel
-```
+2. **Configure o GitHub Pages:**
+   - Vá em `Settings` → `Pages`
+   - Em **Source**, selecione `GitHub Actions`
 
-### Deploy no Netlify
+3. **Adicione as Secrets:**
+   - Vá em `Settings` → `Secrets and variables` → `Actions`
+   - Adicione as seguintes secrets:
+     - `PUBLIC_EMAILJS_SERVICE_ID`
+     - `PUBLIC_EMAILJS_TEMPLATE_ID`
+     - `PUBLIC_EMAILJS_AUTOREPLY_ID`
+     - `PUBLIC_EMAILJS_PUBLIC_KEY`
 
-```bash
-npm run build
-```
+4. **Configure o Base Path:**
+   - Abra `svelte.config.js`
+   - Altere o `base` para o nome do seu repositório:
+   ```js
+   paths: {
+     base: process.env.NODE_ENV === 'production' ? '/nome-do-seu-repo' : ''
+   }
+   ```
 
-Faça upload da pasta `build/` no Netlify.
+5. **Push para Main:**
+   ```bash
+   git add .
+   git commit -m "Configure GitHub Pages"
+   git push origin main
+   ```
+
+6. **Aguarde o Deploy:**
+   - O GitHub Actions irá buildar e fazer deploy automaticamente
+   - Acesse em: `https://Imperiali.github.io/imperiali/`
+
+### Deploy Manual (Outras Plataformas)
+
+O projeto também pode ser hospedado em:
+
+- **Vercel** - `npm install -g vercel && vercel`
+- **Netlify** - Arraste a pasta `build/` no dashboard
+- **Cloudflare Pages** - Conecte o repositório no dashboard
+
+## 📊 GitHub Stats
+
+<div align="center">
+
+![Profile Views](https://komarev.com/ghpvc/?username=Imperiali&color=blueviolet&style=for-the-badge)
+
+[![GitHub followers](https://img.shields.io/github/followers/Imperiali?style=for-the-badge&logo=github)](https://github.com/Imperiali?tab=followers)
+[![GitHub stars](https://img.shields.io/github/stars/Imperiali?style=for-the-badge&logo=github)](https://github.com/Imperiali?tab=repositories)
+
+</div>
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Sinta-se à vontade para:
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📝 Licença
+
+Este projeto é de código aberto e está disponível sob a [MIT License](LICENSE).
 
 ## 📧 Contato
 
-Para dúvidas ou sugestões, entre em contato através do LinkedIn ou email no próprio site.
+**Igor Imperiali**
+
+- 💼 LinkedIn: [igor-imperiali](https://linkedin.com/in/igor-imperiali)
+- 📧 Email: igor.imperiali@gmail.com
+- 🌐 Portfolio: [imperiali.github.io/imperiali](https://imperiali.github.io/imperiali)
 
 ---
 
-Desenvolvido com ❤️ usando SvelteKit
+<div align="center">
+
+### 💜 Desenvolvido com SvelteKit
+
+Se este projeto te ajudou, considere dar uma ⭐!
+
+![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge)
+![Open Source](https://img.shields.io/badge/Open%20Source-💚-green?style=for-the-badge)
+
+</div>

@@ -30,6 +30,7 @@ jobs:
       
       - name: Build
         env:
+          BASE_PATH: /${{ github.event.repository.name }}
           PUBLIC_EMAILJS_SERVICE_ID: ${{ secrets.PUBLIC_EMAILJS_SERVICE_ID }}
           PUBLIC_EMAILJS_TEMPLATE_ID: ${{ secrets.PUBLIC_EMAILJS_TEMPLATE_ID }}
           PUBLIC_EMAILJS_AUTOREPLY_ID: ${{ secrets.PUBLIC_EMAILJS_AUTOREPLY_ID }}
