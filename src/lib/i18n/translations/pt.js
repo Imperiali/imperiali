@@ -47,7 +47,7 @@ export default {
           'Processamento assíncrono com Celery e APIs RESTful com Django Rest Framework',
           'Innovation Ambassador: Liderou adoção de LLMs com 40% de aumento de produtividade'
         ],
-        technologies: ['Django', 'Python', 'Celery', 'UDP/TCP', 'SOAP', 'REST', 'Microservices', 'LLMs', 'Cursor']
+        technologies: ['Django', 'Python', 'Celery', 'UDP/TCP', 'SOAP', 'REST', 'Microservices', 'LLMs', 'Windsurf']
       },
       {
         role: 'Senior Software Engineer',

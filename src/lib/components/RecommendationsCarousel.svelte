@@ -1,91 +1,86 @@
 <script>
-  import { onMount, onDestroy } from 'svelte';
-
+  import emblaCarouselSvelte from 'embla-carousel-svelte';
+  import Autoplay from 'embla-carousel-autoplay';
+  
   export let recommendations = [];
   
-  let currentIndex = 0;
-  let cardsPerView = 3;
-  let autoplayInterval;
-  let isPaused = false;
-
-  $: totalSlides = Math.ceil(recommendations.length / cardsPerView);
-  $: canGoPrev = currentIndex > 0;
-  $: canGoNext = currentIndex < totalSlides - 1;
-
-  function updateCardsPerView() {
+  let emblaApi;
+  let selectedIndex = 0;
+  let scrollSnaps = [];
+  let isMobile = false;
+  
+  const options = {
+    loop: true,
+    align: 'start',
+    skipSnaps: false,
+    slidesToScroll: 1,
+    dragFree: false,
+    containScroll: 'trimSnaps'
+  };
+  
+  const plugins = [
+    Autoplay({ delay: 5000, stopOnInteraction: false })
+  ];
+  
+  function onInit(event) {
+    emblaApi = event.detail;
+    scrollSnaps = emblaApi.scrollSnapList();
+    updateSelectedIndex();
+    
+    emblaApi.on('select', updateSelectedIndex);
+    emblaApi.on('reInit', () => {
+      scrollSnaps = emblaApi.scrollSnapList();
+      updateSelectedIndex();
+    });
+  }
+  
+  function updateSelectedIndex() {
+    if (emblaApi) {
+      selectedIndex = emblaApi.selectedScrollSnap();
+    }
+  }
+  
+  function scrollPrev() {
+    if (emblaApi) emblaApi.scrollPrev();
+  }
+  
+  function scrollNext() {
+    if (emblaApi) emblaApi.scrollNext();
+  }
+  
+  function scrollTo(index) {
+    if (emblaApi) emblaApi.scrollTo(index);
+  }
+  
+  function updateBreakpoint() {
     if (typeof window !== 'undefined') {
-      if (window.innerWidth < 768) {
-        cardsPerView = 1;
-      } else if (window.innerWidth < 1024) {
-        cardsPerView = 2;
-      } else {
-        cardsPerView = 3;
-      }
+      isMobile = window.innerWidth < 768;
     }
   }
-
-  function goToPrev() {
-    if (canGoPrev) {
-      currentIndex--;
-    }
-  }
-
-  function goToNext() {
-    if (canGoNext) {
-      currentIndex++;
-    } else {
-      currentIndex = 0;
-    }
-  }
-
-  function goToSlide(index) {
-    currentIndex = index;
-  }
-
-  function startAutoplay() {
-    if (autoplayInterval) clearInterval(autoplayInterval);
-    autoplayInterval = setInterval(() => {
-      if (!isPaused) {
-        goToNext();
-      }
-    }, 5000);
-  }
-
-  function stopAutoplay() {
-    if (autoplayInterval) {
-      clearInterval(autoplayInterval);
-    }
-  }
-
+  
+  import { onMount, onDestroy } from 'svelte';
+  
   onMount(() => {
-    updateCardsPerView();
-    window.addEventListener('resize', updateCardsPerView);
-    startAutoplay();
+    updateBreakpoint();
+    window.addEventListener('resize', updateBreakpoint);
   });
-
+  
   onDestroy(() => {
     if (typeof window !== 'undefined') {
-      window.removeEventListener('resize', updateCardsPerView);
+      window.removeEventListener('resize', updateBreakpoint);
     }
-    stopAutoplay();
   });
 </script>
 
-<div 
-  class="relative"
-  on:mouseenter={() => isPaused = true}
-  on:mouseleave={() => isPaused = false}
->
-  <div class="overflow-hidden">
-    <div 
-      class="flex transition-transform duration-500 ease-in-out gap-6"
-      style="transform: translateX(-{currentIndex * 100}%)"
-    >
+<div class="relative">
+  <div 
+    class="embla overflow-hidden" 
+    use:emblaCarouselSvelte="{{ options, plugins }}" 
+    on:emblaInit={onInit}
+  >
+    <div class="embla__container flex gap-6">
       {#each recommendations as recommendation}
-        <div 
-          class="flex-shrink-0"
-          style="width: calc((100% - {(cardsPerView - 1) * 1.5}rem) / {cardsPerView})"
-        >
+        <div class="embla__slide flex-[0_0_100%] md:flex-[0_0_calc(50%-1.5rem)] lg:flex-[0_0_calc(33.333%-1rem)] min-w-0 px-2 md:px-0">
           <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow h-full">
             <div class="flex items-start gap-4 mb-4">
               <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center flex-shrink-0">
@@ -109,37 +104,43 @@
     </div>
   </div>
 
-  {#if canGoPrev}
-    <button
-      on:click={goToPrev}
-      class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-colors z-10"
-      aria-label="Previous recommendations"
-    >
-      <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-      </svg>
-    </button>
-  {/if}
+  <button
+    on:click={scrollPrev}
+    class="absolute {isMobile ? 'left-2' : 'left-0 -translate-x-4'} top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-colors z-10"
+    aria-label="Previous recommendations"
+  >
+    <svg class="w-5 h-5 md:w-6 md:h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    </svg>
+  </button>
 
-  {#if canGoNext}
-    <button
-      on:click={goToNext}
-      class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-colors z-10"
-      aria-label="Next recommendations"
-    >
-      <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-      </svg>
-    </button>
-  {/if}
+  <button
+    on:click={scrollNext}
+    class="absolute {isMobile ? 'right-2' : 'right-0 translate-x-4'} top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-colors z-10"
+    aria-label="Next recommendations"
+  >
+    <svg class="w-5 h-5 md:w-6 md:h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
 
   <div class="flex justify-center gap-2 mt-8">
-    {#each Array(totalSlides) as _, index}
+    {#each scrollSnaps as _, index}
       <button
-        on:click={() => goToSlide(index)}
-        class="w-2.5 h-2.5 rounded-full transition-all {currentIndex === index ? 'bg-primary-600 dark:bg-primary-500 w-8' : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'}"
+        on:click={() => scrollTo(index)}
+        class="w-2.5 h-2.5 rounded-full transition-all {selectedIndex === index ? 'bg-primary-600 dark:bg-primary-500 w-8' : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'}"
         aria-label="Go to slide {index + 1}"
       />
     {/each}
   </div>
 </div>
+
+<style>
+  .embla {
+    cursor: grab;
+  }
+  
+  .embla:active {
+    cursor: grabbing;
+  }
+</style>
